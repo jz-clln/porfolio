@@ -1,0 +1,123 @@
+.cs-section {
+  padding: 100px 60px;
+  background: var(--bg);
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card with glow on hover */
+.cs-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cs-card:hover {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 0 20px rgba(255, 109, 0, 0.15),
+    0 0 60px rgba(255, 109, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Real workflow image */
+.cs-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+
+.cs-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cs-card:hover .cs-img {
+  transform: scale(1.03);
+}
+
+/* Content */
+.cs-content { padding: 24px; }
+
+.cs-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.cs-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.cs-badge--problem  { color: var(--accent); }
+.cs-badge--solution { color: #4ade80; }
+
+.cs-text {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+/* Tools */
+.cs-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.cs-tool {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* Metrics */
+.cs-metrics {
+  display: flex;
+  gap: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.cs-metric-val {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.cs-metric-val--accent { color: var(--accent); }
+.cs-metric-label {
+  font-size: 11px;
+  color: var(--text3);
+}
+
+@media (max-width: 800px) {
+  .cs-section { padding: 70px 24px; }
+  .cs-grid { grid-template-columns: 1fr; }
+}

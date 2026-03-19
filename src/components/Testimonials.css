@@ -1,0 +1,92 @@
+.testimonials-section {
+  padding: 100px 0;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* Mask with fade edges */
+.tc-mask {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+}
+.tc-mask::before,
+.tc-mask::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 130px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tc-mask::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+.tc-mask::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+
+/* Scrolling tracks */
+.tc-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding: 4px 0;
+}
+.tc-track--left  { animation: scrollLeft  44s linear infinite; }
+.tc-track--right { animation: scrollRight 44s linear infinite; }
+.tc-track:hover  { animation-play-state: paused; }
+
+/* Card */
+.tc-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 22px 24px;
+  width: 320px;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+.tc-card:hover { border-color: var(--border2); }
+
+.tc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.tc-stars { display: flex; gap: 2px; }
+.tc-star {
+  color: #fbbf24;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.tc-quote-icon {
+  font-size: 42px;
+  color: var(--border2);
+  line-height: 0.8;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  margin-top: -4px;
+}
+
+.tc-text {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.68;
+  margin-bottom: 18px;
+}
+
+.tc-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.tc-role {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+@media (max-width: 768px) {
+  .testimonials-section { padding: 70px 0; }
+  .testimonials-section .section-header { padding: 0 24px !important; }
+}

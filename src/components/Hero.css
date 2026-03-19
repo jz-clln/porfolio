@@ -1,0 +1,165 @@
+.hero {
+  min-height: 100vh;
+  padding: 100px 100px 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ── Left column ── */
+.hero__left {
+  flex: 0 0 auto;
+  max-width: 480px;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(232,87,26,0.07);
+  margin-bottom: 24px;
+}
+
+/* ── Main heading ── */
+.hero__h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -2px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+/* "Autopilot" — animated orange gradient */
+.hero__h1--accent {
+  background: linear-gradient(
+    105deg,
+    #ff6b2b 0%,
+    #e8571a 30%,
+    #ff9a4d 55%,
+    #e8571a 75%,
+    #c43d0a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s linear infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Subheading — regular weight, not bold ── */
+.hero__h2 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--text2);
+  margin-bottom: 22px;
+  line-height: 1.3;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  min-height: 1.5em;
+}
+
+/* ── Cycling word — plain solid orange, no gradient ── */
+.hero__cycling {
+  display: inline-block;
+  color: var(--accent);
+  white-space: nowrap;
+  font-weight: 400;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.hero__cycling--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero__cycling--out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* ── Description ── */
+.hero__desc {
+  font-size: 14.5px;
+  color: var(--text2);
+  line-height: 1.72;
+  max-width: 400px;
+  margin-bottom: 36px;
+}
+
+.hero__btns {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, #e8571a, #f07030);
+  color: #fff;
+  border-radius: 8px;
+  padding: 13px 24px;
+  font-size: 14.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 13px 24px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.btn-secondary:hover { border-color: #555; transform: translateY(-1px); }
+
+/* ── Right column ── */
+.hero__right {
+  flex: 1;
+  max-width: 560px;
+  margin-left: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .hero { padding: 100px 70px 60px; }
+}
+@media (max-width: 1050px) {
+  .hero { padding: 90px 48px 60px; gap: 40px; }
+  .hero__h1 { font-size: 46px; }
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 90px 28px 60px;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .hero__left  { max-width: 100%; }
+  .hero__right { max-width: 100%; width: 100%; margin-left: 0; }
+  .hero__h1    { font-size: 38px; letter-spacing: -1.5px; }
+  .hero__h2    { font-size: 24px; }
+}
