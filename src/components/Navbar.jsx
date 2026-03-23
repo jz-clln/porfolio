@@ -20,7 +20,14 @@ export default function Navbar() {
         <li><a href="#cases">Cases</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button className="navbar__cta">Book a Call</button>
+      <a
+        href="https://calendly.com/jabez-collano/discovery-call"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="navbar__cta"
+      >
+        Book a Call
+      </a>
     </nav>
   );
 }

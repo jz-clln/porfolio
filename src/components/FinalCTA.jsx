@@ -12,12 +12,17 @@ export default function FinalCTA() {
         Book a free automation strategy call and discover how I can save you
         hours every week with custom workflow automation.
       </p>
-      <button className="btn-primary cta-btn">
+      <a
+        href="https://calendly.com/jabez-collano/discovery-call"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-primary cta-btn"
+      >
         Book Free Consultation
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
-      </button>
+      </a>
     </section>
   );
 }

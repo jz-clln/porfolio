@@ -39,6 +39,10 @@ function CyclingText() {
 }
 
 export default function Hero() {
+  const scrollToWork = () => {
+    document.getElementById('workflows')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero" id="hero">
       <div className="hero__left">
@@ -65,13 +69,20 @@ export default function Hero() {
         </p>
 
         <div className="hero__btns">
-          <button className="btn-primary">
+          <a
+            href="https://calendly.com/jabez-collano/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Book Free Consultation
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
+          </a>
+          <button className="btn-secondary" onClick={scrollToWork}>
+            View My Work
           </button>
-          <button className="btn-secondary">View My Work</button>
         </div>
       </div>
 

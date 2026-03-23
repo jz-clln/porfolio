@@ -9,7 +9,7 @@ const CASES = [
     image: leadNurturingImg,
     imageAlt: 'Lead nurturing n8n workflow',
     problem: 'Client was manually qualifying and following up with leads, spending hours sorting form submissions and sending one-by-one emails with no consistent system.',
-    solution: 'Built an automated lead nurturing pipeline that triggers from a Tally form, scores and segments each lead, saves to Google Sheets, then branches by fit — delivering a custom lead magnet email for high/medium leads and an acknowledgement for low fits. Includes email preference webhook and Calendly booking integration.',
+    solution: 'Built an automated lead nurturing pipeline that triggers from a Tally form, scores and segments each lead, saves to Google Sheets, then branches by fit and delivering a custom lead magnet email for high/medium leads and an acknowledgement for low fits. Includes email preference webhook and Calendly booking integration.',
     tools: ['n8n', 'Tally', 'Google Sheets', 'Gmail', 'Calendly'],
     metrics: [
       { value: '100%', label: 'Leads auto-qualified', accent: true },
@@ -22,7 +22,7 @@ const CASES = [
     image: bookingSystemImg,
     imageAlt: 'Booking automation n8n workflow',
     problem: 'Client was managing bookings manually — checking for duplicates, notifying the team, and sending confirmation emails by hand for every new appointment.',
-    solution: 'Built an end-to-end booking automation that validates and normalises incoming form data, checks for existing leads and duplicate bookings, creates new leads when needed, and routes new vs. existing bookings. Automatically notifies the team on Slack, sends Gmail confirmation, and triggers a follow-up campaign — all without human intervention.',
+    solution: 'Built an end-to-end booking automation that validates and normalises incoming form data, checks for existing leads and duplicate bookings, creates new leads when needed, and routes new vs. existing bookings. Automatically notifies the team on Slack, sends Gmail confirmation, and triggers a follow-up campaign, all without human intervention.',
     tools: ['n8n', 'Webhooks', 'Google Sheets', 'Gmail', 'Slack'],
     metrics: [
       { value: '0',    label: 'Duplicate bookings',     accent: false },
