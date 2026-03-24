@@ -2,7 +2,7 @@
   "name": "autoflow-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://jz-clln.github.io/porfolio",
+  "homepage": "https://jabezcollano.com",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

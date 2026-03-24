@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5900b1c6.css",
+    "main.js": "/static/js/main.5a9e6d1e.js",
+    "static/media/booking_system.png": "/static/media/booking_system.412d7748b3917c1101da.png",
+    "static/media/lead_nurturing_system.png": "/static/media/lead_nurturing_system.bdd02103fe8a5bf68a4e.png",
+    "index.html": "/index.html",
+    "main.5900b1c6.css.map": "/static/css/main.5900b1c6.css.map",
+    "main.5a9e6d1e.js.map": "/static/js/main.5a9e6d1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5900b1c6.css",
+    "static/js/main.5a9e6d1e.js"
+  ]
+}
