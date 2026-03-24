@@ -23,7 +23,7 @@ const CASES = [
     imageAlt: 'Booking automation n8n workflow',
     problem: 'Client was managing bookings manually — checking for duplicates, notifying the team, and sending confirmation emails by hand for every new appointment.',
     solution: 'Built an end-to-end booking automation that validates and normalises incoming form data, checks for existing leads and duplicate bookings, creates new leads when needed, and routes new vs. existing bookings. Automatically notifies the team on Slack, sends Gmail confirmation, and triggers a follow-up campaign, all without human intervention.',
-    tools: ['n8n', 'Webhooks', 'Google Sheets', 'Gmail', 'Slack'],
+    tools: ['n8n', 'Webhooks', 'Supabase', 'Gmail', 'Slack'],
     metrics: [
       { value: '0',    label: 'Duplicate bookings',     accent: false },
       { value: '5min', label: 'Avg. confirmation time', accent: true },
