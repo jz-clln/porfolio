@@ -46,7 +46,7 @@ export default function ContactForm() {
       <div className="contact-card">
         {sent ? (
           <div className="contact-success">
-            <span className="contact-success-icon">✅</span>
+            <span className="contact-success-icon">✔</span>
             <p className="contact-success-title">Message sent!</p>
             <p className="contact-success-sub">I'll get back to you within 24 hours.</p>
           </div>
