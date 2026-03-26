@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ChatWidget.css';
 
-const WEBHOOK_URL = 'https://n8n.srv834305.hstgr.cloud/webhook/ai-chat-support-43ea6afb-9ea5-4ab6-a959-b8d0aae1dfca';
+const WEBHOOK_URL = process.env.REACT_APP_CHAT_WEBHOOK;
 
 const WELCOME_MESSAGE = {
   role: 'assistant',
-  text: "👋 Hi! I'm Jabez's AI assistant. I can answer questions about his automation services, and how he can help your business. What would you like to know?",
+  text: "👋 Hi! I'm Jabez's AI assistant. I can answer questions about his automation services, past projects, pricing, and how he can help your business. What would you like to know?",
 };
 
 
